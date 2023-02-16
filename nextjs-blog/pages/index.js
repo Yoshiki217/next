@@ -15,6 +15,7 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>
           Read{' '}
+          
           <Link href="/posts/first_post">
             <>this page!</>
           </Link>
