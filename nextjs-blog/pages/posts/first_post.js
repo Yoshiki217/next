@@ -14,6 +14,7 @@ export default function FirstPost() {
       <Image src={image.src} width={image.width} height={image.height} />
       <Link href="/">
         <>Back to home</>
+        a
       </Link>
     </>
   )
