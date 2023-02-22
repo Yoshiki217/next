@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
 import Script from 'next/script'
+import Layout from '../../components/layout.js'
 
 export default function FirstPost() {
   const image = {
@@ -11,23 +12,22 @@ export default function FirstPost() {
   }
 
   return (
-    <>
+    <Layout>
     <Head>
       <title>First Post</title>
     </Head>
-    <Script
+    {/* <Script
         src="https://connect.facebook.net/en_US/sdk.js"
         strategy="lazyOnload"
         onLoad={() =>
           console.log(`script loaded correctly, window.FB has been populated`)
         }
-      />
+      /> */}
       <h1>First Post</h1>
       <Image src={image.src} width={image.width} height={image.height} />
       <Link href="/">
         <>Back to home</>
-        a
       </Link>
-    </>
+    </Layout>
   )
 }
