@@ -1,3 +1,15 @@
 {
-  "extends": "next/core-web-vitals"
+"globals": {
+  "alert": false,
+  "document": false,
+  "$": false,
+  "console": false
+  },
+  
+  "extends": "next/core-web-vitals",
+
+  "rules": {
+    "space-before-blocks": ["warn", { "functions": "always" }],
+    "quotes": ["warn", "single"]
+  }
 }
