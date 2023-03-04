@@ -3,6 +3,7 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Date from '../components/date.js'
 import Link from 'next/link'
+import { useState } from 'react'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -12,6 +13,24 @@ export async function getStaticProps() {
     }
   }
 }
+
+const todoList = () => {
+  const [ todo , setTodo ] = useState('')
+  
+  return (
+    <div>
+      <input type="text" value={todo}  >{}</input>
+      <button onClick={ useState }>追加</button>
+    </div>
+  )
+}
+
+const addTodo = (todo) => {
+  const newTodo = [...todoList, todo]
+  setTodoList(newTodo)
+
+}
+
 
 export default function Home({ allPostsData }) {
   return (
