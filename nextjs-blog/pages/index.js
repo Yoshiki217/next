@@ -3,6 +3,7 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Date from '../components/date.js'
 import Link from 'next/link'
+import { useState } from 'react'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -12,6 +13,7 @@ export async function getStaticProps() {
     }
   }
 }
+
 
 export default function Home({ allPostsData }) {
   return (
