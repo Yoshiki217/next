@@ -14,23 +14,6 @@ export async function getStaticProps() {
   }
 }
 
-const todoList = () => {
-  const [ todo , setTodo ] = useState('')
-  
-  return (
-    <div>
-      <input type="text" value={todo}  >{}</input>
-      <button onClick={ useState }>追加</button>
-    </div>
-  )
-}
-
-const addTodo = (todo) => {
-  const newTodo = [...todoList, todo]
-  setTodoList(newTodo)
-
-}
-
 
 export default function Home({ allPostsData }) {
   return (
